@@ -18,20 +18,6 @@
             overflow: hidden;
         }
 
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('image1.jpg'), url('image2.jpg'), url('image3.jpg'), url('image4.jpg'), url('image5.jpg');
-            background-size: cover;
-            background-position: center;
-            filter: blur(8px) opacity(0.5);
-            z-index: 1;
-        }
-      
         .carousel {
             width: 80%;
             max-width: 600px;
@@ -80,54 +66,57 @@
 <div class="carousel">
     <div class="slides" id="slides">
         <div class="slide"> 
-            <h2>🧬Environmental Science🧬</h2>
-            <p>Understanding how chemistry impacts our environment.</p>
-        </div>
-        <div class="slide">
-            <h2>Oil Spills</h2>
+            <h2>Movie Review</h2>
             <ul>
-                <li><strong>🧼Cleanup Methods🧼:</strong></li>
-                <li>1. Booms and Skimmers - Contain and remove oil</li>
-                <li>2. Dispersants - Break oil into smaller droplets</li>
-                <li>3. Bioremediation - Uses bacteria to degrade oil</li>
+                <li><strong>Movie:</strong> Black Panther (2018)</li>
             </ul>
         </div>
         <div class="slide">
-            <h2>Car Exhaust Pollution</h2>
+            <h2>Agenda</h2>
             <ul>
-                <li><strong>Combustion Formula:</strong> 2C₈H₁₈ + 25O₂ → 16CO₂ + 18H₂O</li>
-                <li><strong>Effects:</strong> Air pollution, smog, acid rain</li>
-                <li><strong>Catalytic Converter:</strong> Reduces harmful emissions</li>
+                <li>Movie Information</li>
+                <li>Summary of the Movie</li>
+                <li>Themes and Analysis</li>
+                <li>Personal Rating and Review</li>
+                <li>Recommendation</li>
             </ul>
         </div>
         <div class="slide">
-            <h2>Gold Extraction with Cyanide</h2>
+            <h2>Movie Information</h2>
             <ul>
-                <li><strong>Process:</strong></li>
-                <li>1. Cyanide dissolves gold from ore</li>
-                <li>2. Zinc precipitates gold</li>
-                <li>3. Gold is purified for use</li>
-                <li><strong>Environmental Impact:</strong> Toxicity to ecosystems</li>
+                <li><strong>Title:</strong>⭐️Reactions And Environments⭐️</li>
             </ul>
         </div>
         <div class="slide">
-            <h2>🧪Pool Water Treatment🧪</h2>
+            <h2>Summary Of The Movie</h2>
             <ul>
-                <li><strong>Contaminants:</strong> Bacteria, sweat, organic waste</li>
-                <li><strong>Chlorine Disinfection:</strong> Cl₂ + H₂O → HCl + HOCl</li>
-                <li><strong>Effect:</strong> Kills harmful microorganisms</li>
+                <li>T’Challa returns to Wakanda to become king.</li>
+                <li>Faces a challenge from Erik Killmonger.</li>
+                <li>Conflict between tradition and progress.</li>
+                <li>T’Challa must decide the future of Wakanda.</li>
             </ul>
         </div>
         <div class="slide">
-            <h2>☠️Ammonia & Bleach Reaction☠️</h2>
+            <h2>Themes And Analysis</h2>
             <ul>
-                <li><strong>Hazard:</strong> Produces toxic chloramine gas</li>
-                <li><strong>Reaction:</strong> NH₃ + NaOCl → NH₂Cl + NaOH</li>
+                <li><strong>Leadership & Responsibility:</strong> Balance between tradition and progress.</li>
+                <li><strong>Heritage & Identity:</strong> Killmonger’s struggle with displacement.</li>
+                <li><strong>Technology & Tradition:</strong> Wakanda’s advancements vs. cultural roots.</li>
             </ul>
         </div>
         <div class="slide">
-            <h2>Conclusion</h2>
-            <p>Understanding chemistry helps us make better environmental decisions.</p>
+            <h2>Personal Rating And Review</h2>
+            <ul>
+                <li>⭐ ⭐ ⭐ ⭐ (4/5)</li>
+                <li>Visually stunning</li>
+                <li>Fantastic plot</li>
+            </ul>
+        </div>
+        <div class="slide">
+            <h2>Recommendation</h2>
+            <ul>
+                <li><strong>Recommended For:</strong> Ages 12+</li>
+            </ul>
         </div>
     </div>
     <div class="navigation">
@@ -151,8 +140,11 @@
         }
         slides.style.transform = `translateX(${-index * 100}%)`;
     }
+
     document.getElementById('prev').addEventListener('click', () => showSlide(index - 1));
     document.getElementById('next').addEventListener('click', () => showSlide(index + 1));
+    document.getElementById('next').addEventListener('arrowkeyright', () => showSlide(index + 1));
+    document.getElementById('next').addEventListener('arrowkeyleft', () => showSlide(index - 1));
 </script>
 </body>
 </html>
